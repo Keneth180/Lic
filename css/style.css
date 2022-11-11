@@ -395,7 +395,9 @@ footer{
 .boton-eliminar:focus {
     outline: none;
 }
-
+.vaciar-carrito{
+    text-align: center;
+}
 
 
 /* Responsive config
