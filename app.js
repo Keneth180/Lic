@@ -83,6 +83,7 @@ const agregarAlCarrito = (prodId) => {
         //Una vez obtenida la ID, lo que haremos es hacerle un push para agregarlo al carrito
         carrito.push(item)
     }
+
     alert("Agregado satisfactoriamente");
     //Va a buscar el item, agregarlo al carrito y llama a la funcion actualizarCarrito, que recorre
     //el carrito y se ve.
@@ -108,6 +109,7 @@ const eliminarDelCarrito = (prodId) => {
 const actualizarCarrito = () => {
     //4- CUARTO PASO
     //LOS APPENDS SE VAN ACUMULANDO CON LO QE HABIA ANTES
+    cadtext = "Quiero: ";
     contenedorCarrito.innerHTML = "" //Cada vez que yo llame a actualizarCarrito, lo primero q hago
     //es borrar el nodo. Y despues recorro el array lo actualizo de nuevo y lo rellena con la info
     //actualizado
@@ -130,7 +132,8 @@ const actualizarCarrito = () => {
 
         if(LongArray==i){
             div.innerHTML+=`
-            <p class="hacerPedido">Enviar pedido
+            <div class="productoEnCarrito2">
+            <p class="hacerPedido">Pedido 
             <a class="btn-wpp2" href="https://api.whatsapp.com/send?phone=+573184746028&text=${cadtext}. Gracias">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-whatsapp"
                 viewBox="0 0 16 16">
@@ -139,6 +142,7 @@ const actualizarCarrito = () => {
               </svg>
             </a>
             </p>
+            </div>
             `
         }
         
